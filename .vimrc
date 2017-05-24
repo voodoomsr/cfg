@@ -7,5 +7,6 @@ set tabstop=4
 set cursorline
 set mouse=a
 set guicursor+=n-v-c:blinkon1-ver20
-
+set laststatus=2
+set statusline=%f
 
