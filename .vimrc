@@ -8,7 +8,7 @@ set tabstop=4
 "===== Style configurations
 
 "===== Fix mouse behaviour
-set mouse=a
+"set mouse=a
 "===== Fix mouse behaviour
 
 "===== Fix Caret
