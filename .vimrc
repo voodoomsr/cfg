@@ -17,7 +17,6 @@ set statusline=%f
 "===== Fixing broken backspace
 set backspace=2
 set backspace=indent,eol,start
-fixdel
 inoremap <C-d> <Del>
 
 "===== Minimalistic tab usage, note: an specific language syntax file could override these settings, ie $HOME/.vim/syntax/C.vim
@@ -37,3 +36,11 @@ vnoremap <silent> # :<C-U>
   \gvy?<C-R><C-R>=substitute(
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
+
+
+
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+call plug#end()
+
+map <C-n> :NERDTreeToggle<CR>
