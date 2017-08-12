@@ -19,6 +19,11 @@ set backspace=2
 set backspace=indent,eol,start
 inoremap <C-d> <Del>
 
+"===== Move through buffers like a pro
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
+
 "===== Minimalistic tab usage, note: an specific language syntax file could override these settings, ie $HOME/.vim/syntax/C.vim
 set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
 
