@@ -49,3 +49,6 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
+
+"====== Enable mouse support
+set mouse=a
