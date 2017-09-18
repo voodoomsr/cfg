@@ -6,15 +6,9 @@ cd ~
 # bins
 $Env:Path += ";" + "$HOME\scpro\bin\elsewhere"
 
-# proHotkeys
 function config {
    iex "git --git-dir=$HOME/.cfg/ --work-tree=$HOME $($args -join ' ')"
 }
-
-#if(@(Get-Process -name ph -ErrorAction Ignore).Count -eq 0)
-#{
-#    cmd /c "start /D $HOME\scpro\ahk /REALTIME $HOME\scpro\ahk\ph.exe"
-#}
 
 function PSShutdown([switch]$shutdown, [switch]$reboot, [switch]$logoff, [switch]$standBy, [switch]$hibernate)
 {
