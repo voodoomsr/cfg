@@ -1,8 +1,8 @@
 "===== Style configurations
 syntax on
 set ruler
-colorscheme gotham256
 set matchpairs+=<:>
+colorscheme torte
 set number
 set tabstop=4
 

@@ -1,6 +1,5 @@
-﻿$Host.UI.RawUI.BackgroundColor = "Black";
-# Load posh-git example profile
-. "$HOME\scpro\posh-git\profile.example.ps1"
+﻿# Load posh-git example profile
+. 'C:\tools\poshgit\dahlbyk-posh-git-a4faccd\profile.example.ps1' choco
 cd ~
 
 # bins
@@ -88,4 +87,10 @@ function Set-Clipboard{
 	        [Windows.Clipboard]::SetText($clipText)
 	    }
 	}
+}
+
+# Chocolatey profile
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
 }
