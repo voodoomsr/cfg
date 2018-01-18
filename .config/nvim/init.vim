@@ -1,8 +1,8 @@
 "===== Style configurations
 syntax on
 set ruler
-colorscheme gotham256
 set matchpairs+=<:>
+colorscheme torte
 set number
 set tabstop=4
 
@@ -61,3 +61,25 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap <C-o> <C-o>zz
 nnoremap <C-i> <C-i>zz
+
+"====== Relative numbers
+
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+"======= copy paste to/from clipboard
+
+vnoremap <A-y> "+y
+nnoremap <A-Y> "+yg
+nnoremap <A-y> "+y
+nnoremap <A-yy> "+yy
+
+nnoremap <A-p> "+p
+nnoremap <A-P> "+P
+vnoremap <A-p> "+p
+vnoremap <A-P> "+P
