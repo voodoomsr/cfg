@@ -52,3 +52,12 @@ map <C-n> :NERDTreeToggle<CR>
 
 "====== Enable mouse support
 set mouse=a
+set tags=$HOME/.ctags
+nmap t :tag
+nmap - <C-]>
+
+"======= Center Searches
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz
