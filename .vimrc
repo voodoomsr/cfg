@@ -82,3 +82,7 @@ nnoremap <A-p> "+p
 nnoremap <A-P> "+P
 vnoremap <A-p> "+p
 vnoremap <A-P> "+P
+
+"======= removed delay of escape 
+set ttimeout
+set ttimeoutlen=100
