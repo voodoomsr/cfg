@@ -42,12 +42,6 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-
-
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-call plug#end()
-
 map <C-n> :NERDTreeToggle<CR>
 
 "====== Enable mouse support
@@ -86,3 +80,8 @@ vnoremap <A-P> "+P
 "======= removed delay of escape 
 set ttimeout
 set ttimeoutlen=100
+
+" Pathogen
+execute pathogen#infect()
+
+
