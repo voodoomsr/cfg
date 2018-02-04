@@ -83,5 +83,5 @@ set ttimeoutlen=100
 
 " Pathogen
 execute pathogen#infect()
-
-
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = '^'
