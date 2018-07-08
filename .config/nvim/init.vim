@@ -87,6 +87,7 @@ vnoremap <A-P> "+P
 call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " NERDTree config

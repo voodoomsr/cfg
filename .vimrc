@@ -84,6 +84,7 @@ set ttimeoutlen=100
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " NERDTree config
