@@ -81,7 +81,11 @@ vnoremap <A-P> "+P
 set ttimeout
 set ttimeoutlen=100
 
-" Pathogen
-execute pathogen#infect()
+ " vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+call plug#end()
+
+" NERDTree config
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = '^'

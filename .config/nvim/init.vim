@@ -83,3 +83,12 @@ nnoremap <A-p> "+p
 nnoremap <A-P> "+P
 vnoremap <A-p> "+p
 vnoremap <A-P> "+P
+
+" vim-plug
+call plug#begin('~/.config/nvim/plugged')
+Plug 'scrooloose/nerdtree'
+call plug#end()
+
+" NERDTree config
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = '^'
