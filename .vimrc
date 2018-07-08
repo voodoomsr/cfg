@@ -1,7 +1,6 @@
 "===== Style configurations
 syntax on
 set ruler
-colorscheme gotham256
 set matchpairs+=<:>
 set number
 set tabstop=4
@@ -84,8 +83,13 @@ set ttimeoutlen=100
  " vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
+Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 " NERDTree config
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = '^'
+
+" Pale Night
+set background=dark
+colorscheme palenight

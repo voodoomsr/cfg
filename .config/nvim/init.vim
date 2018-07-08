@@ -2,7 +2,6 @@
 syntax on
 set ruler
 set matchpairs+=<:>
-colorscheme torte
 set number
 set tabstop=4
 
@@ -87,8 +86,15 @@ vnoremap <A-P> "+P
 " vim-plug
 call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree'
+Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 " NERDTree config
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = '^'
+
+" Pale night
+set background=dark
+colorscheme palenight
+
+
