@@ -98,4 +98,4 @@ let g:NERDTreeDirArrowCollapsible = '^'
 set background=dark
 colorscheme palenight
 
-
+highlight Visual term=reverse cterm=reverse guibg=Grey
