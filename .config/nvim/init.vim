@@ -52,6 +52,15 @@ map <C-n> :NERDTreeToggle<CR>
 
 "====== Enable mouse support
 set mouse=a
+set tags=$HOME/.ctags
+nmap t :tag
+nmap - <C-]>
+
+"======= Center Searches
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz
 
 "====== Relative numbers
 
@@ -74,3 +83,20 @@ nnoremap <A-p> "+p
 nnoremap <A-P> "+P
 vnoremap <A-p> "+p
 vnoremap <A-P> "+P
+
+" vim-plug
+call plug#begin('~/.config/nvim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'itchyny/lightline.vim'
+call plug#end()
+
+" NERDTree config
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = '^'
+
+" Pale night
+set background=dark
+colorscheme palenight
+
+highlight Visual term=reverse cterm=reverse guibg=Grey

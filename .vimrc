@@ -1,7 +1,6 @@
 "===== Style configurations
 syntax on
 set ruler
-colorscheme gotham256
 set matchpairs+=<:>
 set number
 set tabstop=4
@@ -42,16 +41,19 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-
-
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-call plug#end()
-
 map <C-n> :NERDTreeToggle<CR>
 
 "====== Enable mouse support
 set mouse=a
+set tags=$HOME/.ctags
+nmap t :tag
+nmap - <C-]>
+
+"======= Center Searches
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz
 
 "====== Relative numbers
 set number relativenumber
@@ -73,3 +75,24 @@ nnoremap <A-p> "+p
 nnoremap <A-P> "+P
 vnoremap <A-p> "+p
 vnoremap <A-P> "+P
+
+"======= removed delay of escape 
+set ttimeout
+set ttimeoutlen=100
+
+ " vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'itchyny/lightline.vim'
+call plug#end()
+
+" NERDTree config
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = '^'
+
+" Pale Night
+set background=dark
+colorscheme palenight
+
+highlight Visual term=reverse cterm=reverse guibg=Grey

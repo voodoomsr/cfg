@@ -1,5 +1,4 @@
 ﻿# Load posh-git example profile
-. 'C:\tools\poshgit\dahlbyk-posh-git-a4faccd\profile.example.ps1' choco
 cd ~
 
 # bins
