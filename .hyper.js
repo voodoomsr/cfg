@@ -4,6 +4,11 @@
 
 module.exports = {
   config: {
+
+		opacity: {
+			focus: 0.95,
+			blur: 0.95
+		},
     // default font size in pixels for all tabs
     fontSize: 14,
 
@@ -104,7 +109,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyper-transparent', "hyper-dracula", "hyperterm-cursor"],
+  plugins: ["hyper-opacity", "hyper-dracula", "hyperterm-cursor"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
