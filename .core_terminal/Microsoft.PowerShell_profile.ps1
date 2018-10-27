@@ -1,1 +1,1 @@
-. ~/.env_prepare/win_functions.ps1
+. ~/.env_prepare/windows/functions.ps1
