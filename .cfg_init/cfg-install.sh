@@ -1,14 +1,22 @@
-git clone --bare https://voodoomsr@github.com/voodoomsr/cfg.git $HOME/.cfg
-function config {
+
+function cfg_clone {
+	git clone --bare https://voodoomsr@github.com/voodoomsr/cfg.git $HOME/.cfg
+}
+
+function cfg_git {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
-mkdir -p .config-backup
-config checkout --force master
-if [ $? = 0 ]; then
-  echo "Checked out config.";
-  else
-    echo "Backing up pre-existing dot files.";
-    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
-fi;
-config checkout --force master
-config config status.showUntrackedFiles no
+
+function cfg_apply_with_backup {
+	mkdir -p .config-backup
+	cfg_git checkout master
+	if [ $? = 0 ]; then
+		echo "Checked out config.";
+		else
+			echo "Backing up pre-existing dot files.";
+			cfg_git checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
+			cfg_git checkout master --force 
+	fi;
+}
+
+cfg_config_git config status.showUntrackedFiles no
