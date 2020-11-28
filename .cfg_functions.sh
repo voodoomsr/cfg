@@ -1,4 +1,4 @@
-
+#!/bin/bash 
 function cfg_clone {
 	git clone --bare https://voodoomsr@github.com/voodoomsr/cfg.git $HOME/.cfg
 }
@@ -19,6 +19,6 @@ function cfg_apply_with_backup {
 	fi;
 }
 
-function cfg_status{
+function cfg_status {
 	cfg_git config status.showUntrackedFiles no
 }
