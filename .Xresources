@@ -1,0 +1,5 @@
+! Use a truetype font and size.
+UXTerm*faceName: Source Code Pro for Powerline
+Uxterm*background: black
+Uxterm*foreground: lightgray
+Uxterm*faceSize: 14
