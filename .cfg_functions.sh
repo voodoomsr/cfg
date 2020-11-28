@@ -19,4 +19,6 @@ function cfg_apply_with_backup {
 	fi;
 }
 
-cfg_git config status.showUntrackedFiles no
+function cfg_status{
+	cfg_git config status.showUntrackedFiles no
+}
